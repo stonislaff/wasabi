@@ -1,0 +1,73 @@
+@import "src/globalSCSS/fonts";
+@import "src/globalSCSS/colors";
+.Header {
+  margin-top: 1%;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+
+  .navBar {
+    gap: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    font-size: 20px;
+    color: #eaeaea;
+    font-family: $mainFont;
+  }
+
+  .navElement {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+
+    a:hover {
+      transition-duration: 0.6s;
+      color: $color2;
+      padding-bottom: 8px;
+    }
+
+    a {
+      transition-duration: 0.5s;
+      text-decoration: none;
+      color: #eaeaea;
+    }
+  }
+
+
+  .logo {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3%;
+    margin-right: 3%;
+
+    a {
+      text-decoration: none;
+    }
+      .logoText {
+        display: flex;
+        flex-direction: column;
+
+        .firstText {
+          a{
+            font-size: 50px;
+            line-height: 45px;
+            color: #1df11d;
+            font-family: $logoFirstFont;
+          }
+        }
+
+        .secondText {
+          a{
+            font-family: $logoSecondFont;
+            font-size: 19px;
+            color: white;
+          }
+        }
+      }
+  }
+}
+
+
