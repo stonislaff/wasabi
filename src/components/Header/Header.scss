@@ -27,6 +27,13 @@
       color: $color2;
       padding-bottom: 8px;
     }
+    .active{
+      color: $color8;
+    }
+    .active:hover{
+      color: $color8;
+      cursor: default;
+    }
 
     a {
       transition-duration: 0.5s;
