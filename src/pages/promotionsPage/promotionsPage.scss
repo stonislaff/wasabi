@@ -1,15 +1,5 @@
 @import "src/globalSCSS/fonts";
 @import "src/globalSCSS/colors";
-body{
-  background-image: url("promotion-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 .PromotionsPage{
     width: 100%;
     height: 100vh;
