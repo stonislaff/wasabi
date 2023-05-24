@@ -1,6 +1,7 @@
 import './menuPage.scss'
 import Nav from 'react-bootstrap/Nav';
 import React, { useState } from 'react';
+import MenuCard from "./menuCards/menuCard";
 
 function MenuPage(){
     const [buttonClasses, setButtonClasses] = useState({
@@ -27,21 +28,18 @@ function MenuPage(){
     return(
         <div className="MenuPage">
             <div className="topHalf"></div>
-            <div className="bottomHalf"></div>
-            <div className="contentLine">
-                <div className="menuBlock">
-                    <div className="menuHeader">
-                        <button className={buttonClasses.button1} onClick={() => changeButtonClass('button1')}>Суші</button>
-                        <button className={buttonClasses.button2} onClick={() => changeButtonClass('button2')}>Піца</button>
-                        <button className={buttonClasses.button3} onClick={() => changeButtonClass('button3')}>Напої</button>
-                        <button className={buttonClasses.button4} onClick={() => changeButtonClass('button4')}>Бургери</button>
-                        <button className={buttonClasses.button5} onClick={() => changeButtonClass('button5')}>Страви на компанію</button>
-                    </div>
-                    <div className="menuBody">
-
+            <div className="bottomHalf">
+                <div className="contentBlock">
+                    <div className="menuBlock">
+                        <div className="menuText">
+                            <h1>Меню</h1>
+                            <h3>Опис меню</h3>
+                            <MenuCard sectionName="Закуски" sectionDescription="Опис закусок бла бла бла бла бла бла бла бла бла "/>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
