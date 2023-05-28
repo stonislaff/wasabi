@@ -33,8 +33,19 @@ function MenuPage(){
                     <div className="menuBlock">
                         <div className="menuText">
                             <h1>Меню</h1>
-                            <h3>Опис меню</h3>
-                            <MenuCard sectionName="Закуски" sectionDescription="Опис закусок бла бла бла бла бла бла бла бла бла "/>
+                            <h3>Де натхнення зливається зі смаком і творить справжні кулінарні дива!</h3>
+                            <h2>Закуски</h2>
+                            <h3> Смаковий старт до непередбачуваних смакових подорожей!</h3>
+                            <hr/>
+                            <div className="dishesBlock">
+                                <MenuCard dishName="Деруни зі сметаною" dishDescription="Смажені картопляні оладки з хрусткою скоринкою та м'якою серединкою, подаються зі сметаною." dishPrice="75" dishWeight="50"/>
+                                <MenuCard dishName="Деруни зі свининою та грибами" dishDescription="смажені картопляні оладки зі смачною свининою та грибами - ситна та смачна страва." dishPrice="105" dishWeight="50"/>
+                                <MenuCard dishName="Камамбер смажений" dishDescription="Хрусткий смажений сир з ніжною серединкою - чудова закуска." dishPrice="120" dishWeight="50"/>
+                                <MenuCard dishName="Курячі нагетси" dishDescription="смажені шматочки курячого м'яса - смачний вибір для закуски або дитячого меню." dishPrice="110" dishWeight="150"/>
+                            </div>
+                            <h2>Піцца</h2>
+                            <h3>Відчуйте смакову магію в кожному шматочку піци!</h3>
+                            <hr/>
                         </div>
                     </div>
                 </div>

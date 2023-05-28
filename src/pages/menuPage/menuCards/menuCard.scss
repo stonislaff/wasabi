@@ -1,25 +1,27 @@
-h2{
-  margin-top: 10%;
-  color: white;
-  font-size: 50px;
-}
-h3{
-  color: rgba(255, 255, 255, 0.32);
-  font-size: 25px;
-}
-hr{
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
-  color: red;
-}
-.MenuCard{
-  width: 100%;
-  .dishesBlock{
-    height: auto;
-    width: 100%;
-    .dishesLine{
+@import "src/globalSCSS/fonts";
+@import "src/globalSCSS/colors";
 
-    }
+.MenuCard{
+  height: auto;
+  min-height: 25vh;
+  width: 49%;
+  margin-bottom: 10%;
+  .dishName{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 5%;
+  }
+  .dishPrice{
+    font-size: 30px;
+    color: $color1;
+  }
+  .dishDescription{
+    font-size: 20px;
+    min-height: 50%;
+    color: rgba(255, 255, 255, 0.32);
+  }
+  .dishWeight{
+    font-size: 19px;
+    color: $color8;
   }
 }
