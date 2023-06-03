@@ -1,6 +1,7 @@
 import OrderedDishCard from "../orderedDishCard";
 import './firstOrderPage.scss'
-function FirstOrderPage(){
+
+function FirstOrderPage({ onButtonClick }) {
     return(
         <div className="FirstOrderPage">
             <div className="orderBlock">
@@ -15,7 +16,7 @@ function FirstOrderPage(){
                     <div className="orderPriceText">
                         <div className="prePriceText"> До сплати: </div><div className="orderPrice">123124₴</div>
                     </div>
-                    <button className="goNext">Продовжити</button>
+                    <button className="goNext" onClick={onButtonClick}>Продовжити</button>
                 </div>
             </div>
         </div>

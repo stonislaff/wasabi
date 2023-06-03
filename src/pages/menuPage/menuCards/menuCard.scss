@@ -1,27 +1,57 @@
 @import "src/globalSCSS/fonts";
 @import "src/globalSCSS/colors";
-
 .MenuCard{
   height: auto;
-  min-height: 25vh;
+  min-height: 30vh;
   width: 49%;
   margin-bottom: 10%;
+  padding: 10px;
+  text-align: left;
+  .dishImage{
+    img{
+      border-radius: 10px;
+      width: 100%;
+      height: 200px;
+    }
+  }
   .dishName{
     font-size: 30px;
     color: white;
     margin-bottom: 5%;
   }
-  .dishPrice{
-    font-size: 30px;
-    color: $color1;
+  .dishWeightAndPrice{
+    font-size:20px;
+    color: white;
+    text-align: left;
   }
   .dishDescription{
     font-size: 20px;
-    min-height: 50%;
+    height: auto;
+    min-height: 20%;
+    margin-bottom: 1%;
     color: rgba(255, 255, 255, 0.32);
   }
-  .dishWeight{
-    font-size: 19px;
-    color: $color8;
+  .dishButton{
+    width: 100%;
+    margin-top: 7%;
+    display: flex;
+    button{
+      margin-left: auto;
+      margin-right: auto;
+      transition-duration: 0.5s;
+      border-radius: 5px;
+      border: 1px solid $color2;
+      background: none;
+      color: $color2;
+      height: auto;
+      font-size: 17px;
+      min-height: 60px;
+      width: 50%;
+    }
+    button:hover{
+      transition-duration: 0.5s;
+      background: $color2;
+      color: $color3;
+    }
   }
 }

@@ -1,0 +1,31 @@
+@import "src/globalSCSS/fonts";
+@import "src/globalSCSS/colors";
+
+
+.ThirdOrderPage{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  min-height: 100vh;
+  font-family: $mainFont;
+  .thirdOrderText{
+    color: white;
+    font-size: 40px;
+  }
+  .thirdOrderSubText{
+    color: white;
+    font-size: 25px;
+    text-decoration: underline $color2;
+  }
+  .thirdOrderContent{
+    margin-top: 5%;
+  }
+  .thirdOrderImage{
+    width: auto;
+    img{
+      width: 600px;
+      height: 600px;
+    }
+  }
+}
