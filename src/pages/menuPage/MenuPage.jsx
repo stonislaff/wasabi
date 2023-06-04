@@ -3,8 +3,16 @@ import Nav from 'react-bootstrap/Nav';
 import React, { useState } from 'react';
 import MenuCard from "./menuCards/menuCard";
 import testImg from '../../assets/1+1.png'
+import Cart from './Cart';
 
 function MenuPage() {
+    const [cartItems, setCartItems] = useState([]);
+
+    const addToCart = (dish) => {
+        setCartItems([...cartItems, dish]);
+        console.log("Елементи кошика:", cartItems);
+    };
+
     const [buttonClasses, setButtonClasses] = useState({
         button1: 'menuHeaderButtonActive',
         button2: 'menuHeaderButton',
@@ -89,6 +97,7 @@ function MenuPage() {
                                         dishDescription={dish.dishDescription}
                                         dishPrice={dish.dishPrice}
                                         dishWeight={dish.dishWeight}
+                                        addToCart={() => addToCart(dish)}
                                     />
                                 ))}
                             </div>

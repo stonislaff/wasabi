@@ -8,7 +8,7 @@ function MenuCard(props) {
         setIsClicked(true);
 
         // Додаткова логіка для додавання товару в кошик
-        // ...
+        props.addToCart();
 
         setTimeout(() => {
             setIsClicked(false);

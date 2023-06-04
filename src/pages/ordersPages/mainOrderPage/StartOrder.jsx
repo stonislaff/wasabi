@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './startOrder.scss'
-import OrderedDishCard from "./orderedDishCard";
+import OrderedDishCard from "./OrderedDishCard";
 import FirstOrderPage from "./firstOrderPage/firstOrderPage";
 import SecondOrderPage from "./secondOrderPage/secondOrderPage";
 import ThirdOrderPage from "./thirdOrderPage/thirdOrderPage";

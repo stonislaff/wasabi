@@ -1,6 +1,6 @@
 import './orderedDishCard.scss'
 
-function orderedDishCard(){
+function OrderedDishCard(props){
     return(
         <div className="OrderedDishCard">
             <div className="deleteSection">
@@ -8,9 +8,9 @@ function orderedDishCard(){
             </div>
             <div className="textSection">
                 <div className="title">
-                    Деруни зі свининою та грибами
+                    {props.dishName}
                 </div>
-                <div className="weightText">50г</div>
+                <div className="weightText">{props.dishWeight}г</div>
             </div>
             <div className="countSection">
                 <button>-</button>
@@ -18,10 +18,10 @@ function orderedDishCard(){
                 <button>+</button>
             </div>
             <div className="priceSection">
-                1000₴
+                {props.dishPrice}₴
             </div>
         </div>
     )
 }
 
-export default orderedDishCard
+export default OrderedDishCard
