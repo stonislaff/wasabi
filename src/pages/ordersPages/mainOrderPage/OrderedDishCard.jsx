@@ -1,21 +1,16 @@
 import './orderedDishCard.scss'
-
+import deleteImg from '../../../assets/delete.svg'
 function OrderedDishCard(props){
     return(
         <div className="OrderedDishCard">
             <div className="deleteSection">
-                <button>X</button>
+                <button onClick={props.onRemove}>&#10060;</button>
             </div>
             <div className="textSection">
                 <div className="title">
                     {props.dishName}
                 </div>
                 <div className="weightText">{props.dishWeight}г</div>
-            </div>
-            <div className="countSection">
-                <button>-</button>
-                <div className="countText">1</div>
-                <button>+</button>
             </div>
             <div className="priceSection">
                 {props.dishPrice}₴

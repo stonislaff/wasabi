@@ -17,6 +17,7 @@ function StartOrder(){
     };
 
     const handleButtonClickSecondPage = () => {
+        localStorage.clear()
         setShowThirdPage(true);
     };
 

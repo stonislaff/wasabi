@@ -1,80 +1,33 @@
-import './menuPage.scss'
+import './menuPage.scss';
 import Nav from 'react-bootstrap/Nav';
-import React, { useState } from 'react';
-import MenuCard from "./menuCards/menuCard";
-import testImg from '../../assets/1+1.png'
+import React, { useEffect, useState } from 'react';
+import MenuCard from './menuCards/menuCard';
+import testImg from '../../assets/1+1.png';
 import Cart from './Cart';
+import dishesList from "./dishesList";
+
+
+const dishes = dishesList
 
 function MenuPage() {
-    const [cartItems, setCartItems] = useState([]);
-
-    const addToCart = (dish) => {
-        setCartItems([...cartItems, dish]);
-        console.log("Елементи кошика:", cartItems);
-    };
-
-    const [buttonClasses, setButtonClasses] = useState({
-        button1: 'menuHeaderButtonActive',
-        button2: 'menuHeaderButton',
-        button3: 'menuHeaderButton',
-        button4: 'menuHeaderButton',
-        button5: 'menuHeaderButton'
+    const [cartItems, setCartItems] = useState(() => {
+        const items = JSON.parse(window.localStorage.getItem('cartItems'));
+        return items || [];
     });
 
-    const changeButtonClass = (buttonName) => {
-        setButtonClasses(prevClasses => {
-            const updatedClasses = { ...prevClasses };
+    useEffect(() => {
+        window.localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
 
-            for (const name in updatedClasses) {
-                if (name === buttonName) {
-                    updatedClasses[name] = 'menuHeaderButtonActive';
-                } else {
-                    updatedClasses[name] = 'menuHeaderButton';
-                }
-            }
-
-            return updatedClasses;
-        });
+    const addToCart = (dish) => {
+        setCartItems((prevItems) => [...prevItems, dish]);
     };
 
-    const dishes = [
-        {
-            dishName: 'Деруни зі сметаною',
-            dishDescription: 'Смажені картопляні оладки з хрусткою скоринкою та м\'якою серединкою, подаються зі сметаною.',
-            dishPrice: '75',
-            dishWeight: '150'
-        },
-        {
-            dishName: 'Деруни зі свининою та грибами',
-            dishDescription: 'Смажені картопляні оладки зі смачною свининою та грибами - ситна та смачна страва.',
-            dishPrice: '105',
-            dishWeight: '50'
-        },
-        {
-            dishName: 'Камамбер смажений',
-            dishDescription: 'Хрусткий смажений сир з ніжною серединкою - чудова закуска.',
-            dishPrice: '120',
-            dishWeight: '50'
-        },
-        {
-            dishName: 'Курячі нагетси',
-            dishDescription: 'Смажені шматочки курячого м\'яса - смачний вибір для закуски або дитячого меню.',
-            dishPrice: '110',
-            dishWeight: '150'
-        },
-        {
-            dishName: 'Деруни зі свининою та грибами',
-            dishDescription: 'Смажені картопляні оладки зі смачною свининою та грибами - ситна та смачна страва.',
-            dishPrice: '105',
-            dishWeight: '50'
-        },
-        {
-            dishName: 'Деруни зі свининою та грибами',
-            dishDescription: 'Смажені картопляні оладки зі смачною свининою та грибами - ситна та смачна страва.',
-            dishPrice: '105',
-            dishWeight: '50'
-        },
-    ];
+    const [activeButton, setActiveButton] = useState(1);
+
+    const handleButtonClick = (buttonIndex) => {
+        setActiveButton(buttonIndex);
+    };
 
     return (
         <div className="MenuPage">
@@ -84,7 +37,10 @@ function MenuPage() {
                     <div className="menuBlock">
                         <div className="menuText">
                             <h1>Меню</h1>
-                            <h3>Де натхнення зливається зі смаком і творить справжні кулінарні дива!</h3>
+                            <h3>
+                                Де натхнення зливається зі смаком і творить справжні кулінарні
+                                дива!
+                            </h3>
                             <h2>Закуски</h2>
                             <h3> Смаковий старт до непередбачуваних смакових подорожей!</h3>
                             <hr />
@@ -92,11 +48,7 @@ function MenuPage() {
                                 {dishes.map((dish, index) => (
                                     <MenuCard
                                         key={index}
-                                        dishImage={testImg}
-                                        dishName={dish.dishName}
-                                        dishDescription={dish.dishDescription}
-                                        dishPrice={dish.dishPrice}
-                                        dishWeight={dish.dishWeight}
+                                        {...dish}
                                         addToCart={() => addToCart(dish)}
                                     />
                                 ))}
