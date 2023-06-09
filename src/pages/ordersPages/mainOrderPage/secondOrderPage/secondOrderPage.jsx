@@ -143,7 +143,7 @@ function SecondOrderPage({ onButtonClick }) {
                 {deliveryType === 'pickup' && renderPickupFields()}
                 {deliveryType === 'courier' && renderCourierFields()}
                 <div className="orderCompleteButton">
-                    <button onClick={onButtonClick}>Готово</button>
+                    <button onClick={() => onButtonClick({ deliveryType, phoneNumber, restaurantAddress, deliveryAddress })}>Готово</button>
                 </div>
             </div>
         </div>
