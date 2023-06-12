@@ -16,66 +16,127 @@
     font-size: 20px;
     color: #eaeaea;
     font-family: $mainFont;
-  }
 
-  .navElement {
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
+    .navElement {
+      margin-top: auto;
+      margin-bottom: auto;
+      text-align: center;
 
-    a:hover {
-      transition-duration: 0.6s;
-      color: $color2;
-      padding-bottom: 8px;
-    }
-    .active{
-      color: $color8;
-    }
-    .active:hover{
-      color: $color8;
-      cursor: default;
+      a:hover {
+        transition-duration: 0.6s;
+        color: $color2;
+        padding-bottom: 8px;
+      }
+
+      .active {
+        color: $color8;
+      }
+
+      .active:hover {
+        color: $color8;
+        cursor: default;
+      }
+
+      a {
+        transition-duration: 0.5s;
+        text-decoration: none;
+        color: #eaeaea;
+      }
     }
 
-    a {
-      transition-duration: 0.5s;
-      text-decoration: none;
-      color: #eaeaea;
-    }
-  }
+    .logo {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 3%;
+      margin-right: 3%;
 
-  .logo {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 3%;
-    margin-right: 3%;
+      a {
+        text-decoration: none;
+      }
 
-    a {
-      text-decoration: none;
+      .logoText {
+        display: flex;
+        flex-direction: column;
+
+        .firstText {
+          a {
+            font-size: 50px;
+            line-height: 45px;
+            color: #1df11d;
+            font-family: $logoFirstFont;
+          }
+        }
+
+        .secondText {
+          a {
+            font-family: $logoSecondFont;
+            font-size: 19px;
+            color: white;
+          }
+        }
+      }
     }
-    .logoText {
-      display: flex;
+
+    .dropdownMenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $color6;
+      display: none;
       flex-direction: column;
 
-      .firstText {
-        a{
-          font-size: 50px;
-          line-height: 45px;
-          color: #1df11d;
-          font-family: $logoFirstFont;
+      .navElement {
+        margin: 5px 0;
+      }
+    }
+
+    .menuToggle {
+      display: none;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 480px) {
+      .navBar {
+        flex-direction: column;
+        align-items: center;
+
+        .dropdownMenu {
+          display: flex;
+        }
+
+        .navElement {
+          display: none;
+        }
+
+        .menuToggle {
+          display: block;
         }
       }
 
-      .secondText {
-        a{
-          font-family: $logoSecondFont;
-          font-size: 19px;
-          color: white;
+      .logoText {
+        .firstText {
+          a {
+            font-size: 30px;
+            line-height: 35px;
+          }
+        }
+
+        .secondText {
+          display: none;
         }
       }
     }
   }
 
+  @media screen and (max-width: 320px) {
+    .Header {
+      height: 50px;
+    }
+  }
+
+  // Залишаю решту медіа-запитів без змін
   @media screen and (max-width: 1200px) {
     .Header {
       height: 90px;
@@ -92,18 +153,6 @@
     .Header {
       height: 70px;
       font-size: 16px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .Header {
-      height: 60px;
-    }
-  }
-
-  @media screen and (max-width: 320px) {
-    .Header {
-      height: 50px;
     }
   }
 }
