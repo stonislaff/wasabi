@@ -46,7 +46,6 @@ function StartOrder(){
         const totalPriceString = `\n\nДО СПЛАТИ: ${totalPrice}₴`;
 
         axios.post('http://138.2.177.122:1488/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
-        axios.post('http://localhost:5000/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
         localStorage.clear()
         setShowThirdPage(true);
     };
