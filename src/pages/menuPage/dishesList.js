@@ -3,6 +3,7 @@ import deruni1 from '../../assets/menuImages/deruni1.jpg'
 import deruni2 from '../../assets/menuImages/deruni2.jpg'
 import kamamber from '../../assets/menuImages/kamamber.jpg'
 import nagets from '../../assets/menuImages/nagets.jpg'
+
 import cesar from '../../assets/menuImages/pizza_cesar.webp'
 import cheeses from '../../assets/menuImages/pizza_4cheeses.jpg'
 import karbonara from '../../assets/menuImages/pizza_karbonara.jpg'
@@ -13,6 +14,28 @@ import country from '../../assets/menuImages/pizza_country.jpg'
 import hunt from '../../assets/menuImages/pizza_hunt.jpg'
 import meat from '../../assets/menuImages/pizza_meat.jpg'
 import havay from '../../assets/menuImages/pizza_gavay.jpg'
+
+import burger_double from '../../assets/menuImages/burger_double.jpg'
+import burger_chicken from '../../assets/menuImages/burger_chicken.jpg'
+import burger_beef from '../../assets/menuImages/burger_beef.png'
+import burger_pork from '../../assets/menuImages/burger_pork.jpg'
+import burger_chili from '../../assets/menuImages/burger_chili.jpg'
+import burger_vegan from '../../assets/menuImages/burger_vegan.jpg'
+
+import sooshi_3dragons from '../../assets/menuImages/sooshi_3dragons.jpeg'
+import sooshi_calif from '../../assets/menuImages/sooshi_calif.png'
+import sooshi_delux from '../../assets/menuImages/sooshi_delux.jpg'
+import sooshi_double from '../../assets/menuImages/sooshi_double.jpg'
+import sooshi_fila from '../../assets/menuImages/sooshi_fila.webp'
+import sooshi_hot from '../../assets/menuImages/sooshi_hot.jpeg'
+import sooshi_maki from '../../assets/menuImages/sooshi_maki.png'
+import sooshi_mega from '../../assets/menuImages/sooshi_mega.png'
+import sooshi_mix from '../../assets/menuImages/sooshi_mix.jpg'
+import sooshi_sumon from '../../assets/menuImages/sooshi_sumon.jpg'
+
+
+
+
 const dishesList = [
     {
         dishName: 'Деруни зі сметаною',
@@ -145,7 +168,7 @@ const dishesList = [
             'Бургер для справжніх апетитів - подвійне м\'ясне задоволення з ароматними спеціями.',
         dishPrice: '188',
         dishWeight: '290',
-        dishImage: nagets,
+        dishImage: burger_double,
         category: 3
     },
     {
@@ -154,7 +177,7 @@ const dishesList = [
             'Здорове задоволення - рослинний бургер з багатими смаками і хрусткою текстурою.',
         dishPrice: '165',
         dishWeight: '240',
-        dishImage: nagets,
+        dishImage: burger_vegan,
         category: 3
     },
     {
@@ -163,7 +186,7 @@ const dishesList = [
             'Пікантний експлозивний смак - гострий бургер зі смаженим м\'ясом, перцем та соусом.',
         dishPrice: '155',
         dishWeight: '260',
-        dishImage: nagets,
+        dishImage: burger_chili,
         category: 3
     },
     {
@@ -172,7 +195,7 @@ const dishesList = [
             'Соковите куряче м\'ясо з сиром - ніжний бургер для любителів курячого смаку.',
         dishPrice: '165',
         dishWeight: '930',
-        dishImage: nagets,
+        dishImage: burger_chicken,
         category: 3
     },
     {
@@ -181,7 +204,7 @@ const dishesList = [
             'Смакова насолода свинини - поєднання соковитого свинячого м\'яса, сиру та ароматних спецій.',
         dishPrice: '145',
         dishWeight: '240',
-        dishImage: nagets,
+        dishImage: burger_pork,
         category: 3
     },
     {
@@ -190,7 +213,7 @@ const dishesList = [
             'Смаковий екстаз - соковите яловиче м\'ясо з сиром і ароматним соусом.',
         dishPrice: '155',
         dishWeight: '240',
-        dishImage: nagets,
+        dishImage: burger_beef,
         category: 3
     },
     {
@@ -199,7 +222,7 @@ const dishesList = [
             'Каліфорнія з лососем, каліфорнія з креветкою, онігірі з крабом, макі з огірком.',
         dishPrice: '165',
         dishWeight: '240',
-        dishImage: nagets,
+        dishImage: sooshi_delux,
         category: 4
     },
     {
@@ -208,7 +231,7 @@ const dishesList = [
             'Зелений дракон, філадельфія з лососем, сирний з креветкою, онігірі з тунцем.',
         dishPrice: '742',
         dishWeight: '980',
-        dishImage: nagets,
+        dishImage: sooshi_mega,
         category: 4
     },
     {
@@ -217,7 +240,7 @@ const dishesList = [
             'Філа з: лососем, вугрем, креветкою, лососем та огірком.',
         dishPrice: '895',
         dishWeight: '1040',
-        dishImage: nagets,
+        dishImage: sooshi_fila,
         category: 4
     },
     {
@@ -226,7 +249,7 @@ const dishesList = [
             'Червоний дракон, зелений дракон, золотий дракон.',
         dishPrice: '778',
         dishWeight: '820',
-        dishImage: nagets,
+        dishImage: sooshi_3dragons,
         category: 4
     },
     {
@@ -235,7 +258,7 @@ const dishesList = [
             'Рол з лососем, ніжний з куркою, запечений з вугрем, запечений з креветкою.',
         dishPrice: '667',
         dishWeight: '1070',
-        dishImage: nagets,
+        dishImage: sooshi_hot,
         category: 4
     },
     {
@@ -244,7 +267,7 @@ const dishesList = [
             'Макі з сиром, авокадо, лососем, вугрем.',
         dishPrice: '416',
         dishWeight: '480',
-        dishImage: nagets,
+        dishImage: sooshi_maki,
         category: 4
     },
     {
@@ -253,7 +276,7 @@ const dishesList = [
             'Каліфорнія з лососем в кунжуті, онігірі з крабом, сирний з вугрем.',
         dishPrice: '510',
         dishWeight: '700',
-        dishImage: nagets,
+        dishImage: sooshi_double,
         category: 4
     },
     {
@@ -262,7 +285,7 @@ const dishesList = [
             'Філадельфія з креветкою, ніжний з куркою, спайсі з лососем, макі з огірком, вега рол.',
         dishPrice: '724',
         dishWeight: '1150',
-        dishImage: nagets,
+        dishImage: sooshi_sumon,
         category: 4
     },
     {
@@ -271,7 +294,7 @@ const dishesList = [
             'Каліфорнія з креветкою, ніжний з куркою, спайсі з лососем, онігірі з лососем, ніжний з лососем.',
         dishPrice: '667',
         dishWeight: '950',
-        dishImage: nagets,
+        dishImage: sooshi_calif,
         category: 4
     },
     {
@@ -280,7 +303,7 @@ const dishesList = [
             'Філа з лососем та огірком, каліфорнія з лососем в кунжуті, макі з авокадо, сирний з креветкою, спайсі з крабом, ніжний з куркою',
         dishPrice: '895',
         dishWeight: '1390',
-        dishImage: nagets,
+        dishImage: sooshi_mix,
         category: 4
     }
 ];

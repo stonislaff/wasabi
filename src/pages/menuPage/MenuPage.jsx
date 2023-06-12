@@ -2,7 +2,6 @@ import './menuPage.scss';
 import Nav from 'react-bootstrap/Nav';
 import React, { useEffect, useState } from 'react';
 import MenuCard from './menuCards/menuCard';
-import testImg from '../../assets/1+1.png';
 import Cart from './Cart';
 import dishesList from "./dishesList";
 

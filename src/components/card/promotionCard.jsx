@@ -1,7 +1,6 @@
 import './promotionCard.scss'
 import {Button} from "react-bootstrap";
 import button from "bootstrap/js/src/button";
-import cart from '../../assets/cart.svg'
 import {NavLink} from "react-router-dom";
 function PromotionCard(props){
     const cardStyle = props.cardStyle === 'dark' ? "darkCardStyle" : 'lightCardStyle';
