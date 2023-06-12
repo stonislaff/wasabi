@@ -45,7 +45,7 @@ function StartOrder(){
         const totalPrice = cartItems.reduce((total, item) => total + parseFloat(item.dishPrice), 0);
         const totalPriceString = `\n\nДО СПЛАТИ: ${totalPrice}₴`;
 
-        axios.post('138.2.153.107:1488/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
+        axios.post('138.2.177.122:1488/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
         axios.post('http://localhost:5000/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
         localStorage.clear()
         setShowThirdPage(true);

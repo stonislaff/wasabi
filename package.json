@@ -22,7 +22,7 @@
     "web-vitals": "^3.3.1"
   },
   "scripts": {
-    "start": "concurrently \"node src/telegramModule/server.js\" \"HOST=0.0.0.0 react-scripts start\"",
+    "start": "concurrently \"node src/telegramModule/server.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
