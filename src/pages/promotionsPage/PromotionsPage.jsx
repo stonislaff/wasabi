@@ -13,11 +13,9 @@ function PromotionsPage(){
             <div className="topHalf"></div>
             <div className="bottomHalf"></div>
             <div className="cardsContainer">
-                <PromotionCard cardStyle='light'  cardImage={one_plus_one} cardTitle='1 + 1 = 3' cardDescription='Замов дві великих піцци та отримай третю абсолютно безкоштовно!' buttonText='Замовити'/>
-                <PromotionCard cardStyle='dark'  cardImage={sushi} cardTitle='Акційний сет' cardDescription='Знижка в честь того, що я пишу диплом' buttonText='Замовити'/>
-                <PromotionCard cardStyle='dark'  cardImage={sushi_time} cardTitle='День суші' cardDescription='Отримай 15% знижки на суші кожен вівторок!' buttonText='Замовити'/>
-                <PromotionCard cardStyle='light'  cardImage={hb} cardTitle='З днем народження!' cardDescription='У тебе сьогодні день народження? Тримай -10%!' buttonText='Замовити'/>
-
+                <PromotionCard cardStyle='dark'  cardImage={one_plus_one} cardTitle='3 піцци' cardDescription='Замов 3 піцци та отримай шанс виграти ще 3 в подарунок.' buttonText='Замовити'/>
+                <PromotionCard cardStyle='dark'  cardImage={sushi} cardTitle='Самовивіз' cardDescription='Знижка 10%, якщо забираєте замовлення в закладі.' buttonText='Замовити'/>
+                <PromotionCard cardStyle='dark'  cardImage={sushi_time} cardTitle='Сотий клієнт' cardDescription='Кожен 100-й клієнт отримує замовлення абсолютно безкоштовно' buttonText='Замовити'/>
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import './promotionCard.scss'
 import {Button} from "react-bootstrap";
 import button from "bootstrap/js/src/button";
 import cart from '../../assets/cart.svg'
-
+import {NavLink} from "react-router-dom";
 function PromotionCard(props){
     const cardStyle = props.cardStyle === 'dark' ? "darkCardStyle" : 'lightCardStyle';
     return(
@@ -19,9 +19,9 @@ function PromotionCard(props){
                 </div>
             </div>
             <div className="cardButtonPart">
-                <Button variant="outline-danger">
+                <NavLink to='/menu'><Button variant="outline-danger">
                     {props.buttonText}
-                </Button>
+                </Button></NavLink>
             </div>
         </div>
     )

@@ -1,43 +1,47 @@
 @import "src/globalSCSS/fonts";
 @import "src/globalSCSS/colors";
-.MenuCard{
+
+.MenuCard {
   height: auto;
   min-height: 30vh;
   width: 49%;
   margin-bottom: 10%;
   padding: 10px;
   text-align: left;
-  .dishImage{
-    img{
+
+  .dishImage {
+    img {
       border-radius: 10px;
       width: 100%;
       height: 200px;
     }
   }
-  .dishName{
+
+  .dishName {
     font-size: 30px;
     color: white;
     margin-bottom: 5%;
   }
-  .dishWeightAndPrice{
-    font-size:20px;
+
+  .dishWeightAndPrice {
+    font-size: 20px;
     color: white;
     text-align: left;
   }
-  .dishDescription{
+
+  .dishDescription {
     font-size: 20px;
     height: auto;
     min-height: 20%;
     margin-bottom: 1%;
     color: rgba(255, 255, 255, 0.32);
   }
-  .dishButton{
+
+  .dishButton {
     width: 100%;
     margin-top: 7%;
-    display: flex;
-    button{
-      margin-left: auto;
-      margin-right: auto;
+
+    button {
       transition-duration: 0.5s;
       border-radius: 5px;
       border: 1px solid $color2;
@@ -48,10 +52,46 @@
       min-height: 60px;
       width: 50%;
     }
-    button:hover{
+
+    button:hover {
       transition-duration: 0.5s;
       background: $color2;
       color: $color3;
+    }
+  }
+
+  // Media queries for mobile devices
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin-bottom: 5%;
+
+    .dishImage {
+      img {
+        height: 150px;
+      }
+    }
+
+    .dishName {
+      font-size: 24px;
+    }
+
+    .dishWeightAndPrice {
+      font-size: 18px;
+    }
+
+    .dishDescription {
+      font-size: 16px;
+    }
+
+    .dishButton {
+      display: flex;
+      button {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        min-height: 50px;
+        width: 70%;
+      }
     }
   }
 }

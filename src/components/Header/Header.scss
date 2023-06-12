@@ -1,5 +1,6 @@
 @import "src/globalSCSS/fonts";
 @import "src/globalSCSS/colors";
+
 .Header {
   margin-top: 1%;
   z-index: 10;
@@ -42,7 +43,6 @@
     }
   }
 
-
   .logo {
     text-align: center;
     margin-top: auto;
@@ -53,28 +53,67 @@
     a {
       text-decoration: none;
     }
-      .logoText {
-        display: flex;
-        flex-direction: column;
+    .logoText {
+      display: flex;
+      flex-direction: column;
 
-        .firstText {
-          a{
-            font-size: 50px;
-            line-height: 45px;
-            color: #1df11d;
-            font-family: $logoFirstFont;
-          }
-        }
-
-        .secondText {
-          a{
-            font-family: $logoSecondFont;
-            font-size: 19px;
-            color: white;
-          }
+      .firstText {
+        a{
+          font-size: 50px;
+          line-height: 45px;
+          color: #1df11d;
+          font-family: $logoFirstFont;
         }
       }
+
+      .secondText {
+        a{
+          font-family: $logoSecondFont;
+          font-size: 19px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  // Media Queries
+  @media screen and (max-width: 1200px) {
+    // Styles for screens up to 1200px
+    .Header {
+      height: 90px;
+      // Add your styles here
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    // Styles for screens up to 992px
+    .Header {
+      height: 80px;
+      // Add your styles here
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    // Styles for screens up to 768px
+    .Header {
+      height: 70px;
+      // Add your styles here
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    // Styles for screens up to 480px
+    .Header {
+      height: 60px;
+      // Add your styles here
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    // Styles for screens up to 320px
+    .Header {
+      height: 50px;
+      // Add your styles here
+    }
   }
 }
-
-

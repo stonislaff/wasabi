@@ -1,46 +1,50 @@
 @import "src/globalSCSS/fonts";
 @import "src/globalSCSS/colors";
-.MainPage{
+
+.MainPage {
   font-family: $mainFont;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  .topHalf{
+
+  .topHalf {
     flex: 2;
     width: 100%;
     height: 100%;
     background-image: url("bg.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     -webkit-filter: brightness(40%);
   }
-  .infoBlock{
+
+  .infoBlock {
     font-family: $mainFont;
     font-size: 30px;
     padding-left: 30px;
     position: absolute;
     width: 50%;
     height: 50%;
-    .label{
+
+    .label {
       font-size: 64px;
       color: rgba(255, 0, 0, 0.54);
       margin-bottom: 10%;
     }
-    .infoLine{
+
+    .infoLine {
       width: 80%;
       display: flex;
       color: #e7e7e7;
-      h1{
+
+      h1 {
         color: rgba(255, 0, 0, 0.3);
         margin-right: 10px;
         margin-left: 20px;
       }
     }
-    img{
+
+    img {
       margin-right: 1%;
       opacity: 20%;
       width: 50px;
@@ -48,4 +52,44 @@
     }
   }
 
+  // Media Queries
+  @media screen and (max-width: 1200px) {
+    // Styles for screens up to 1200px
+    .infoBlock {
+      width: 70%;
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    // Styles for screens up to 992px
+    .infoBlock {
+      width: 80%;
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    // Styles for screens up to 768px
+    .infoBlock {
+      width: 90%;
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    // Styles for screens up to 480px
+    .infoBlock {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    // Styles for screens up to 320px
+    .infoBlock {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+  }
 }
