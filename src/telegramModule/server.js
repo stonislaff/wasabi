@@ -22,6 +22,10 @@ app.post('/send-message', (req, res) => {
             res.sendStatus(500);
         });
 });
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://wasabi-rv.vercel.app');
+    next();
+});
 const port = 5000;
 
 app.listen(port, () => {
