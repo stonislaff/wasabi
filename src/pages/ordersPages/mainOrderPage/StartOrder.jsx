@@ -47,6 +47,7 @@ function StartOrder(){
 
 
         axios.post('http://localhost:5000/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
+        axios.post('https://wasabi-rv.vercel.app/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
         localStorage.clear()
         setShowThirdPage(true);
     };
