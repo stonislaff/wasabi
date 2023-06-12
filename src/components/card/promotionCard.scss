@@ -1,7 +1,7 @@
 @import "src/globalSCSS/fonts";
 @import "src/globalSCSS/colors";
 
-.darkCardStyle{
+.darkCardStyle {
   box-shadow: -5px 10px 10px 3px rgba(0, 0, 0, 0.49);
   font-family: $mainFont;
   z-index: 30;
@@ -12,11 +12,12 @@
   margin-right: 5%;
   border: 2px rgba(255, 255, 255, 0.78) solid;
 
-  .cardImage{
+  .cardImage {
     width: 100%;
     height: 50%;
     border-radius: 3%;
-    img{
+
+    img {
       border-top-left-radius: 2%;
       border-top-right-radius: 2%;
       border-bottom-right-radius: 60%;
@@ -26,28 +27,53 @@
       border-bottom: white 4px solid;
     }
   }
-  .cardTextPart{
+
+  .cardTextPart {
     padding: 10px;
     height: 35%;
-    .cardTitle{
+
+    .cardTitle {
       text-align: center;
       font-size: 25px;
       color: $color1;
     }
-    .cardDescription{
+
+    .cardDescription {
       color: white;
       text-align: center;
       font-size: 18px;
     }
   }
-  .cardButtonPart{
+
+  .cardButtonPart {
     display: flex;
     justify-content: center;
+  }
 
+  @media (max-width: 320px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 480px) {
+    width: 45%;
+  }
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+
+  @media (min-width: 992px) {
+    width: 20%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 15%;
   }
 }
 
-.lightCardStyle{
+.lightCardStyle {
   box-shadow: -5px 10px 10px 3px rgba(0, 0, 0, 0.69);
   font-family: $mainFont;
   z-index: 30;
@@ -58,11 +84,12 @@
   margin-right: 5%;
   border: 3px rgb(0, 0, 0) solid;
 
-  .cardImage{
+  .cardImage {
     width: 100%;
     height: 50%;
     border-radius: 3%;
-    img{
+
+    img {
       border-top-left-radius: 2%;
       border-top-right-radius: 2%;
       border-bottom-right-radius: 60%;
@@ -71,26 +98,56 @@
       border-bottom: #000000 5px solid;
     }
   }
-  .cardTextPart{
+
+  .cardTextPart {
     padding: 10px;
     height: 35%;
-    .cardTitle{
+
+    .cardTitle {
       text-align: center;
       font-size: 25px;
       color: #639a0d;
     }
-    .cardDescription{
+
+    .cardDescription {
       text-align: center;
       color: black;
       font-size: 18px;
     }
   }
-  .cardButtonPart{
+
+  .cardButtonPart {
     display: flex;
     justify-content: center;
+  }
 
+  @media (max-width: 320px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 480px) {
+    width: 45%;
+  }
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+
+  @media (min-width: 992px) {
+    width: 20%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 15%;
   }
 }
 
-
-
+@media (max-width: 768px) {
+  .darkCardStyle{
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
