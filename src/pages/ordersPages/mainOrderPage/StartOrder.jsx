@@ -45,9 +45,8 @@ function StartOrder(){
         const totalPrice = cartItems.reduce((total, item) => total + parseFloat(item.dishPrice), 0);
         const totalPriceString = `\n\nДО СПЛАТИ: ${totalPrice}₴`;
 
-
-        axios.post('http://localhost:5000/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
         axios.post('https://wasabi-rv.vercel.app/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
+        axios.post('http://localhost:5000/send-message', { message: msgOrderNumber + msgDeliveryType + msgRestaurantAddress + msgPhoneNumber + dishListString + totalPriceString})
         localStorage.clear()
         setShowThirdPage(true);
     };
