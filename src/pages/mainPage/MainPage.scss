@@ -52,9 +52,7 @@
     }
   }
 
-  // Media Queries
   @media screen and (max-width: 1200px) {
-    // Styles for screens up to 1200px
     .infoBlock {
       width: 70%;
       font-size: 24px;
@@ -62,7 +60,6 @@
   }
 
   @media screen and (max-width: 992px) {
-    // Styles for screens up to 992px
     .infoBlock {
       width: 80%;
       font-size: 20px;
@@ -70,7 +67,6 @@
   }
 
   @media screen and (max-width: 768px) {
-    // Styles for screens up to 768px
     .infoBlock {
       width: 90%;
       font-size: 18px;
@@ -78,7 +74,6 @@
   }
 
   @media screen and (max-width: 480px) {
-    // Styles for screens up to 480px
     .infoBlock {
       width: 100%;
       font-size: 16px;
@@ -86,7 +81,6 @@
   }
 
   @media screen and (max-width: 320px) {
-    // Styles for screens up to 320px
     .infoBlock {
       padding-left: 20px;
       font-size: 14px;
