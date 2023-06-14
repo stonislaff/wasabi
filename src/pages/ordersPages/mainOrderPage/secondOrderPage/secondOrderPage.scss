@@ -92,6 +92,12 @@
 }
 .phoneNumber{
   color: $color2;
+  input{
+    margin-top: 30px;
+    margin-left: 20px;
+    background: white;
+    border: none;
+  }
 }
 .shippingAddress{
   color: $color2;

@@ -12,8 +12,10 @@ function SecondOrderPage({ onButtonClick }) {
     };
 
     const handlePhoneNumberChange = (event) => {
-        setPhoneNumber(event.target.value);
+        const input = event.target.value.replace(/[^+\d]/g, ''); // Видаляємо усі символи, крім "+" та цифр
+        setPhoneNumber(input);
     };
+
 
     const handleRestaurantAddressChange = (index, event) => {
         const addresses = [...restaurantAddress];
@@ -31,7 +33,7 @@ function SecondOrderPage({ onButtonClick }) {
                 <div className="radio"></div>
                 <label className="phoneNumber">
                     Номер телефону:
-                    <input type="text" value={phoneNumber} onChange={handlePhoneNumberChange} />
+                    <input type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
                 </label>
                 <div className="orderSubTitle">
                     Оберіть адресу найближчого до вас закладу:
@@ -39,11 +41,11 @@ function SecondOrderPage({ onButtonClick }) {
                 <div>
                     <input
                         type="radio"
-                        value="Кулика і гудачека 44"
-                        checked={restaurantAddress[0] === 'Кулика і гудачека 44'}
+                        value="Кулика і Гудачека 44"
+                        checked={restaurantAddress[0] === 'Кулика і Гудачека 44'}
                         onChange={(event) => handleRestaurantAddressChange(0, event)}
                     />
-                    Кулика і гудачека 44
+                    Кулика і Гудачека 44
                 </div>
                 <div>
                     <input
@@ -70,9 +72,9 @@ function SecondOrderPage({ onButtonClick }) {
     const renderCourierFields = () => {
         return (
             <div className="delivery">
-                <label  className="phoneNumber">
+                <label className="phoneNumber">
                     Номер телефону:
-                    <input type="text" value={phoneNumber} onChange={handlePhoneNumberChange} />
+                    <input type="tel" value={phoneNumber} onChange={handlePhoneNumberChange} />
                 </label>
                 <div className="orderSubTitle">
                     Оберіть адресу найближчого до вас закладу:
@@ -80,11 +82,11 @@ function SecondOrderPage({ onButtonClick }) {
                 <div>
                     <input
                         type="radio"
-                        value="Кулика і гудачека 44"
-                        checked={restaurantAddress[0] === 'Кулика і гудачека 44'}
+                        value="Кулика і Гудачека 44"
+                        checked={restaurantAddress[0] === 'Кулика і Гудачека 44'}
                         onChange={(event) => handleRestaurantAddressChange(0, event)}
                     />
-                    Кулика і гудачека 44
+                    Кулика і Гудачека 44
                 </div>
                 <div>
                     <input
